@@ -7,6 +7,10 @@ console.log("++--++--++--++--++--++--\n\n");
 
 ### APP_URL:
 
+https://dewan-blog-prisma-shadcn-mongo.vercel.app/
+https://dewan-blog-prisma-shadcn-mongo-freakin-d1a.vercel.app/
+https://dewan-blog-prisma-shadcn-mongo-freakin-d1a.vercel.app/
+
 #### Git first upload:
 
 ```bash
@@ -25,7 +29,7 @@ git push -u origin main
 ```bash
 git add . &&
 git status &&
-git commit -m "commit : 00.03 " &&
+git commit -m "commit : 00.04 " &&
 git push -u origin main
 ```
 
