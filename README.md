@@ -5,6 +5,10 @@ console.log(stuff);
 console.log("++--++--++--++--++--++--\n\n");
 ```
 
+```bash
+
+```
+
 ### APP_URL:
 
 https://dewan-blog-prisma-shadcn-mongo.vercel.app/
@@ -29,7 +33,7 @@ git push -u origin main
 ```bash
 git add . &&
 git status &&
-git commit -m "commit : 00.04 " &&
+git commit -m "commit : 00.05 " &&
 git push -u origin main
 ```
 
@@ -41,8 +45,41 @@ git push -u origin main
 npx prisma init
 ```
 
-#### db push:
+```js
+// index.js
+import { PrismaClient } from "@prisma/client";
+
+let prisma;
+
+if (process.env.NODE_ENV === "production") {
+	prisma = new PrismaClient();
+} else {
+	if (!global.prisma) {
+		global.prisma = new PrismaClient();
+	}
+	prisma = global.prisma;
+}
+
+export default prisma;
+
+export const connectToDb = async () => {
+	await prisma.$connect();
+};
+
+export const disconnectFromDb = async () => {
+	await prisma.$disconnec();
+};
+```
+
+#### after creating the model db push:
 
 ```bash
 npx prisma db push
+```
+
+### shadcn-ui:
+
+```bash
+npx shadcn-ui@latest init &&
+npx shadcn-ui@latest add button card toast
 ```
