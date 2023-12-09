@@ -33,7 +33,7 @@ git push -u origin main
 ```bash
 git add . &&
 git status &&
-git commit -m "commit : 00.05 " &&
+git commit -m "commit : 00.06 " &&
 git push -u origin main
 ```
 
@@ -81,5 +81,7 @@ npx prisma db push
 
 ```bash
 npx shadcn-ui@latest init &&
+@/shadcn/components
+@/shadcn/utils
 npx shadcn-ui@latest add button card toast
 ```
