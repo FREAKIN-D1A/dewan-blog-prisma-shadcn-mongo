@@ -41,6 +41,8 @@ git add . &&
 git status &&
 git commit -m "commit : 00.final " &&
 git push -u origin main
+
+git push -f origin main
 ```
 
 ### Prisma:
