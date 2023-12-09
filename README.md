@@ -39,7 +39,7 @@ git push -u origin main
 ```bash
 git add . &&
 git status &&
-git commit -m "commit : 00.06 " &&
+git commit -m "commit : 00.final " &&
 git push -u origin main
 ```
 
