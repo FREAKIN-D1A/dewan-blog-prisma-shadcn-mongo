@@ -14,9 +14,11 @@ if (process.env.NODE_ENV === "production") {
 export default prisma;
 
 export const connectToDb = async () => {
+	console.log("<<<<<<<< connectToDb >>>>>>>");
 	await prisma.$connect();
 };
 
 export const disconnectFromDb = async () => {
+	console.log("<<<<<<<< disconnectFromDb >>>>>>>");
 	await prisma.$disconnec();
 };

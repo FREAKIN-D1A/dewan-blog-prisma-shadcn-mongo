@@ -1,6 +1,6 @@
 ```js
 console.log("\n\n++--++--++--++--++--++--");
-console.log("stuff ===============>");
+console.log("stuff  ======>");
 console.log(stuff);
 console.log("++--++--++--++--++--++--\n\n");
 ```
@@ -40,8 +40,8 @@ git push -u origin main
 git add . &&
 git status &&
 git commit -m "commit : 00.final.1 " &&
-git push -u origin main
 
+git push -u origin main
 git push -f origin main
 ```
 
