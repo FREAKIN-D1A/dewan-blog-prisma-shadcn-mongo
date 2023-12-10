@@ -17,9 +17,12 @@ export const baseApiUrl = path.join(baseApiUrl, "api");
 
 ### APP_URL:
 
-https://dewan-blog-prisma-shadcn-mongo.vercel.app/ <br>
-https://dewan-blog-prisma-shadcn-mongo-freakin-d1a.vercel.app/ <br>
-https://dewan-blog-prisma-shadcn-mongo-freakin-d1a.vercel.app/ <br>
+https://dewan-blog-prisma-shadcn-mongo.vercel.app/
+
+https://dewan-blog-prisma-shadcn-mongo-freakin-d1a.vercel.app/
+
+https://dewan-blog-prisma-shadcn-mongo-git-main-freakin-d1a.vercel.app/  
+
 
 #### Git first upload:
 
