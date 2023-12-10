@@ -17,12 +17,11 @@ export const baseApiUrl = path.join(baseApiUrl, "api");
 
 ### APP_URL:
 
-https://dewan-blog-prisma-shadcn-mongo.vercel.app/
+https://dewan-blog-prisma-shadcn-mongo.vercel.app/    
 
 https://dewan-blog-prisma-shadcn-mongo-freakin-d1a.vercel.app/
 
-https://dewan-blog-prisma-shadcn-mongo-git-main-freakin-d1a.vercel.app/  
-
+https://dewan-blog-prisma-shadcn-mongo-git-main-freakin-d1a.vercel.app/
 
 #### Git first upload:
 
@@ -42,7 +41,7 @@ git push -u origin main
 ```bash
 git add . &&
 git status &&
-git commit -m "commit : 00.final.1 " &&
+git commit -m "commit : 01.001 " &&
 
 git push -u origin main
 git push -f origin main

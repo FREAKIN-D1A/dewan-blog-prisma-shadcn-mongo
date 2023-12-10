@@ -3,6 +3,28 @@ import { getToken } from "next-auth/jwt";
 import { NextResponse } from "next/server";
 import prisma, { connectToDb, disconnectFromDb } from "@/prisma";
 
+export async function GET(req) {
+	await connectToDb();
+	const _req = await req.json();
+
+	try {
+		const blogs = await prisma.blog.findMany();
+		return NextResponse.json(
+			{ success: "Blogs get request. successfully", blogs: blogs },
+			{ status: 200 }
+		);
+	} catch (err) {
+		console.log("\n\n++--++--++--++--++--++--");
+		console.log("err ======>");
+		console.log(err);
+		console.log("++--++--++--++--++--++--\n\n");
+
+		return NextResponse.json({ err: err.message }, { status: 500 });
+	} finally {
+		await disconnectFromDb();
+	}
+}
+
 export async function POST(req) {
 	await connectToDb();
 	const _req = await req.json();
