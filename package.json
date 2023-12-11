@@ -2,6 +2,7 @@
 	"name": "next-js-blog-prisma-mongo-shadcn",
 	"version": "0.1.0",
 	"private": true,
+
 	"scripts": {
 		"dev": "npx prisma generate && next dev",
 		"build": "npx prisma generate && next build",
@@ -9,7 +10,9 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@hookform/resolvers": "^3.3.2",
 		"@prisma/client": "^5.7.0",
+		"@radix-ui/react-label": "^2.0.2",
 		"@radix-ui/react-slot": "^1.0.2",
 		"@radix-ui/react-toast": "^1.1.5",
 		"bcrypt": "^5.1.1",
@@ -18,11 +21,14 @@
 		"lucide-react": "^0.294.0",
 		"next": "14.0.3",
 		"next-auth": "^4.24.5",
+		"path": "^0.12.7",
 		"react": "^18",
 		"react-dom": "^18",
+		"react-hook-form": "^7.49.0",
 		"slugify": "^1.6.6",
 		"tailwind-merge": "^2.1.0",
-		"tailwindcss-animate": "^1.0.7"
+		"tailwindcss-animate": "^1.0.7",
+		"zod": "^3.22.4"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.0.1",

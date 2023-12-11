@@ -20,5 +20,5 @@ export const connectToDb = async () => {
 
 export const disconnectFromDb = async () => {
 	console.log("<<<<<<<< disconnectFromDb >>>>>>>");
-	await prisma.$disconnec();
+	await prisma.$disconnect();
 };

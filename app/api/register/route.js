@@ -34,10 +34,13 @@ export async function POST(req) {
 			},
 		});
 
-		return NextResponse.json({
-			success: "Registration successful",
-			newUser: newUser,
-		});
+		return NextResponse.json(
+			{
+				success: "Registration successful",
+				newUser: newUser,
+			},
+			{ status: 201 }
+		);
 	} catch (err) {
 		console.log("\n\n++--++--++--++--++--++--");
 		console.log("err ======>");
