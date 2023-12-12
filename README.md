@@ -41,7 +41,7 @@ git push -u origin main
 ```bash
 git add . &&
 git status &&
-git commit -m "commit : 01.01.00 " &&
+git commit -m "commit : 01.02.00 " &&
 
 git push -u origin main
 git push -f origin main

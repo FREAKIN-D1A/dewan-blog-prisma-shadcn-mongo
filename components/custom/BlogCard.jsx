@@ -8,13 +8,17 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+import { authOptions } from "@/lib/authOptions";
 import Link from "next/link";
 
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import { getServerSession } from "next-auth";
 dayjs.extend(relativeTime);
 
-export default function BlogCard({ blog }) {
+export default async function BlogCard({ blog }) {
+	const sessionData = await getServerSession(authOptions);
+
 	return (
 		<Card className='min-h-[490px] flex flex-col justify-evenly'>
 			<CardHeader>
@@ -66,11 +70,15 @@ export default function BlogCard({ blog }) {
 				<small className='text-slate-600 '>
 					❤️ {blog?.likes?.length} likes
 				</small>
-				<Button variant='outline'>View More</Button>
+				<div className='w-1/2 flex flex-row justify-evenly '>
+					<Button variant='outline'>View More</Button>
 
-				{/* <div className='w-1/2 flex flex-row justify-between'>
-					<Button>Edit</Button>
-				</div> */}
+					{sessionData?.user?.id == blog?.postedBy?.id ? (
+						<div className='flex flex-row justify-between'>
+							<Button>Edit</Button>
+						</div>
+					) : null}
+				</div>
 			</CardFooter>
 		</Card>
 	);
