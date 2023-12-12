@@ -1,8 +1,8 @@
 ```js
-console.log("\n\n++--++--++--++--++--++--");
-console.log("stuff  ======>");
+console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+console.log("stuff  ===>\n");
 console.log(stuff);
-console.log("++--++--++--++--++--++--\n\n");
+console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
 ```
 
 ### APP_URL:
@@ -20,7 +20,7 @@ export const baseUrl =
 		? process.env.NEXT_PUBLIC_PRODUCTION_URL
 		: process.env.NEXT_PUBLIC_DEV_URL;
 
-export const baseApiUrl = path.join(baseApiUrl, "api");
+export const baseApiUrl = baseUrl + "/api";
 ```
 
 #### Git first upload:
@@ -41,7 +41,7 @@ git push -u origin main
 ```bash
 git add . &&
 git status &&
-git commit -m "commit : 01.002 " &&
+git commit -m "commit : 01.01.00 " &&
 
 git push -u origin main
 git push -f origin main

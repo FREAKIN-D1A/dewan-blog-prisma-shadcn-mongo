@@ -42,6 +42,8 @@ const Register = () => {
 				description: data.success,
 			});
 
+			router.push("/login");
+
 			// Redirect to login page or any other desired action
 		} catch (error) {
 			// Display error message

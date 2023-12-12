@@ -26,8 +26,9 @@ model Blog {
   title String @unique 
   slug String @unique 
   content String 
-  category String 
-  image String
+  category String? 
+  location String? 
+  image String?
   postedBy User @relation(fields: [postedById], references: [id], onDelete:Cascade)
   postedById String @db.ObjectId
   likes String[] @default([])
