@@ -15,20 +15,20 @@ export async function PUT(req) {
 			where: { id: _req.blogId },
 		});
 
-		console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
-		console.log("server blog likes ===>\n");
-		console.log(blog.likes);
-		console.log("blog _req.userId ===>\n");
-		console.log(_req.userId.toString());
-		console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
+		// console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+		// console.log("server blog likes ===>\n");
+		// console.log(blog.likes);
+		// console.log("blog _req.userId ===>\n");
+		// console.log(_req.userId.toString());
+		// console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
 
 		// blog.likes = blog.likes.push(`${25522}`);
 		blog.likes.splice(0, 0, _req.userId.toString());
 
-		console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
-		console.log(" server blog likes after* ===>\n");
-		console.log(blog.likes);
-		console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
+		// console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+		// console.log(" server blog likes after* ===>\n");
+		// console.log(blog.likes);
+		// console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
 
 		delete blog.id;
 		const updatedBlog = await prisma.blog.update({
@@ -38,10 +38,10 @@ export async function PUT(req) {
 			},
 		});
 
-		console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
-		console.log("updatedBlog server  ===>\n");
-		console.log(updatedBlog);
-		console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
+		// console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+		// console.log("updatedBlog server  ===>\n");
+		// console.log(updatedBlog);
+		// console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
 
 		return NextResponse.json({ updatedBlog, msg: "liked" }, { status: 200 });
 

@@ -19,27 +19,27 @@ export default function BlogLike(props) {
 	// console.log(" { data, status } = useSession();  ===>\n");
 	// console.log({ data, status });
 
-	console.log("likes ===>\n");
-	console.log(likes);
+	// console.log("likes ===>\n");
+	// console.log(likes);
 
-	console.log(" data?.user?.id ===>\n");
-	console.log(data?.user?.id);
-	console.log(typeof data?.user?.id);
+	// console.log(" data?.user?.id ===>\n");
+	// console.log(data?.user?.id);
+	// console.log(typeof data?.user?.id);
 
-	console.log(" props.blog?.likes ===>\n");
-	console.log(props.blog?.likes);
-	console.log(typeof props.blog?.likes);
+	// console.log(" props.blog?.likes ===>\n");
+	// console.log(props.blog?.likes);
+	// console.log(typeof props.blog?.likes);
 
-	console.log("isLiked ===>\n");
-	console.log(isLiked);
-	console.log(typeof isLiked);
+	// console.log("isLiked ===>\n");
+	// console.log(isLiked);
+	// console.log(typeof isLiked);
 
-	console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
+	// console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
 
-	console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
-	console.log(" { likes, isLiked, pathname }  ===>\n");
-	console.log({ likes, isLiked, pathname });
-	console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
+	// console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+	// console.log(" { likes, isLiked, pathname }  ===>\n");
+	// console.log({ likes, isLiked, pathname });
+	// console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
 
 	const handleLike = async () => {
 		if (status !== "authenticated") {
