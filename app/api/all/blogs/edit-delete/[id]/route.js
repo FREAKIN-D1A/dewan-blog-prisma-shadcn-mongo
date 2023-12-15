@@ -44,7 +44,11 @@ export async function DELETE(req, context) {
 			where: { id: context.params.id }, // Specify the identifier of the record to delete
 		});
 
-		console.log(deletedBlog); // The deleted blog record
+		console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+		console.log("deletedBlog  ===>\n");
+		console.log(deletedBlog);
+		console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
+
 		return NextResponse.json(deletedBlog, { status: 200 });
 	} catch (err) {
 		console.log("\n\n-=-=-=-=-=-=-=-=-=-=-=");

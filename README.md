@@ -1,8 +1,8 @@
 ```js
-console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+console.log("\n\n<<<<=====<<<<====<<<<\n");
 console.log("stuff  ===>\n");
 console.log(stuff);
-console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
+console.log("\n>>>>>====>>>>>=====>>>>\n\n");
 ```
 
 ### APP_URL:
@@ -39,12 +39,13 @@ git push -u origin main
 #### Git upload:
 
 ```bash
+
 git add . &&
 git status &&
-git commit -m "commit : 01.02.00 " &&
-
+git commit -m "commit : 01.03.00 for production" &&
 git push -u origin main
 git push -f origin main
+
 ```
 
 ### Prisma:

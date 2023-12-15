@@ -7,6 +7,7 @@ export const config = {
 		"/:path*/test/:path*",
 		"/:path*/profile/:path*",
 		"/:path*/blogs/add/:path*",
+		"/:path*/edit/:path*",
 	],
 };
 

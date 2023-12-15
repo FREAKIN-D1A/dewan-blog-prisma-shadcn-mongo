@@ -14,6 +14,7 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { getServerSession } from "next-auth";
+import BlogLike from "./BlogLike";
 dayjs.extend(relativeTime);
 
 export default async function BlogCard({ blog }) {
@@ -67,15 +68,22 @@ export default async function BlogCard({ blog }) {
 			</CardContent>
 
 			<CardFooter className='flex justify-between content-end'>
-				<small className='text-slate-600 '>
+				{/* <small className='text-slate-600 '>
 					❤️ {blog?.likes?.length} likes
-				</small>
+				</small> */}
+
+				<BlogLike blog={blog} />
+				
 				<div className='w-1/2 flex flex-row justify-evenly '>
-					<Button variant='outline'>View More</Button>
+					<Link href={`/blogs/${blog.slug}`}>
+						<Button variant='outline'>View More</Button>
+					</Link>
 
 					{sessionData?.user?.id == blog?.postedBy?.id ? (
 						<div className='flex flex-row justify-between'>
-							<Button>Edit</Button>
+							<Link href={"/blogs/edit/" + blog.slug}>
+								<Button>Edit</Button>
+							</Link>
 						</div>
 					) : null}
 				</div>

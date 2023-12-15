@@ -13,7 +13,7 @@ async function getUserBlogs(id) {
 			headers: {
 				"Content-Type": "application/json",
 			},
-			next: { revalidate: 60 },
+			// next: { revalidate: 60 },
 		});
 		if (!response.ok) {
 			throw new Error("Failed to fetch  blogs");

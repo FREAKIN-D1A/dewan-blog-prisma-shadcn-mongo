@@ -9,10 +9,10 @@ export async function GET(req, context) {
 			include: { postedBy: true },
 		});
 
-		console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
-		console.log("blog  ===>\n");
-		console.log(blog);
-		console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
+		// console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+		// console.log("blog  ===>\n");
+		// console.log(blog);
+		// console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
 
 		if (blog) {
 			return NextResponse.json(
