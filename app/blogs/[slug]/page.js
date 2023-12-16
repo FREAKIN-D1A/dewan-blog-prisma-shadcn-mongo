@@ -14,7 +14,7 @@ async function getBlog(slug) {
 			headers: {
 				"Content-Type": "application/json",
 			},
-			next: { revalidate: 2 },
+			cache: "no-store",
 		});
 
 		if (!response.ok) {

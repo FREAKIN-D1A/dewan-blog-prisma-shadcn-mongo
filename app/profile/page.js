@@ -13,7 +13,8 @@ async function getUserBlogs(id) {
 			headers: {
 				"Content-Type": "application/json",
 			},
-			// next: { revalidate: 60 },
+			cache: "no-store",
+			// next: { revalidate: 0 },
 		});
 		if (!response.ok) {
 			throw new Error("Failed to fetch  blogs");

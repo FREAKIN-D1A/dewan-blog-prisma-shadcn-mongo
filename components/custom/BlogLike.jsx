@@ -69,6 +69,7 @@ export default function BlogLike(props) {
 						"Content-Type": "application/json",
 					},
 					body: JSON.stringify({ blogId: blog?.id, userId: data?.user?.id }),
+					cache: "no-store",
 				});
 
 				const res = await response.json();
@@ -96,6 +97,7 @@ export default function BlogLike(props) {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({ blogId: blog?.id, userId: data?.user?.id }),
+				cache: "no-store",
 			});
 
 			if (!response.ok) {
