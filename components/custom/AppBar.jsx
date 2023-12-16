@@ -1,7 +1,11 @@
 import { signOut, useSession } from "next-auth/react";
 import Logo from "./Logo";
 import Link from "next/link";
-// import { useSearch } from "@/context/searchContextFile";
+import { useSearch } from "@/context/searchContextFile";
+import Magnify from "./Magnify";
+// import { MagnifyingGlassIcon } from "@heroicons/react/outline";
+// import { SearchIcon } from "@heroicons/react/24/outline";
+// import { SearchIcon } from "@heroicons/react/24/outline";
 
 const authLinks = [
 	{ id: "1-1", name: "Blogs", url: "/blogs" },
@@ -19,7 +23,7 @@ const noAuthLinks = [
 
 export default function Appbar() {
 	const { data, status, update } = useSession();
-	// const { searchQuery, setSearchQuery, fetchSearchResults } = useSearch();
+	const { searchQuery, setSearchQuery, fetchSearchResults } = useSearch();
 	// const sss = useSearch();
 
 	const links = status === "authenticated" ? authLinks : noAuthLinks;
@@ -30,6 +34,25 @@ export default function Appbar() {
 					<Logo />
 
 					<div className='flex justify-between items-center space-x-4'>
+						{/* <form
+							role='search'
+							onSubmit={fetchSearchResults}
+							className='flex items-center px-7'>
+							<input
+								type='search'
+								placeholder='Search blogs'
+								aria-label='Search'
+								onChange={(e) => setSearchQuery(e.target.value)}
+								value={searchQuery}
+								className='border p-3 rounded-md focus:outline-none focus:border-gray-600'
+							/>
+							<button
+								type='submit'
+								className='btn  text-slate-600 rounded-r-md outline-1 h-11'>
+								<Magnify className='h-11 w-11' />
+							</button>
+							 
+						</form> */}
 						{links.map(({ id, name, url }) => (
 							<Link
 								className='text-gray-900 hover:text-violet-600 text-lg'

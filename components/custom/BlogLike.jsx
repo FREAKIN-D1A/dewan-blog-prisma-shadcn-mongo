@@ -15,7 +15,7 @@ export default function BlogLike(props) {
 	const [likes, setLikes] = useState(blog.likes) || [];
 	const isLiked = likes?.includes(data?.user?.id);
 
-	console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+	// console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
 	// console.log(" { data, status } = useSession();  ===>\n");
 	// console.log({ data, status });
 

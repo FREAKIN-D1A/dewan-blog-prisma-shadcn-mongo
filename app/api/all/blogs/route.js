@@ -10,10 +10,10 @@ export async function GET(req) {
 	const searchParams = queryString.parseUrl(req.url).query; // ?page=2
 	// const _req = await req.json();
 
-	console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
-	console.log("searchParams  function GET ===>\n");
-	console.log(searchParams);
-	console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
+	// console.log("\n\n<<<<<=====<<<<<====<<<<<\n");
+	// console.log("searchParams  function GET ===>\n");
+	// console.log(searchParams);
+	// console.log("\n>>>>>====>>>>>=====>>>>>>\n\n");
 
 	const { page } = searchParams || {};
 	const pageSize = 6;

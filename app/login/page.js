@@ -18,7 +18,7 @@ export default function Login() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		// console.log(JSON.stringify({ email, password }));
-		
+
 		try {
 			const result = await signIn("credentials", {
 				email,
@@ -95,7 +95,7 @@ export default function Login() {
 
 			<button
 				onClick={() => router.push("/register")}
-				className=' w-full mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-red-300'>
+				className=' w-full mt-4 bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-red-300'>
 				Not Registered yet ? Register here...
 			</button>
 

@@ -115,7 +115,7 @@ const Register = () => {
 
 			<button
 				onClick={() => router.push("/login")}
-				className=' w-full mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-red-300'>
+				className=' w-full mt-4 bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-red-300'>
 				Already Registered ? Login
 			</button>
 

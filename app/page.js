@@ -49,15 +49,15 @@ export default async function Home({ searchParams }) {
 
 	const session = await getSession();
 
-	console.log("\n\n+=+=+=+=+=+=+=+=+=+=+=+=\n");
-	console.log("session response  ===>\n");
-	console.log(session);
-	console.log("\n+=+=+=+=+=+=+=+=+=+=+=+=\n\n");
+	// console.log("\n\n+=+=+=+=+=+=+=+=+=+=+=+=\n");
+	// console.log("session response  ===>\n");
+	// console.log(session);
+	// console.log("\n+=+=+=+=+=+=+=+=+=+=+=+=\n\n");
 
 	return (
 		<main className='flex min-h-screen flex-col items-center justify-between p-24'>
-			<p className='lead text-primary text-center'>Latest Blogs</p>
-
+			
+			<p className='lead text-primary text-center font-bold'>Latest Blogs</p>
 			<BlogList blogs={blogs} />
 		</main>
 	);

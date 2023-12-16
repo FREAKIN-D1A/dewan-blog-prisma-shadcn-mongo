@@ -33,7 +33,11 @@ export default async function BlogCard({ blog }) {
 				</div>
 				<CardTitle>
 					<h3 className='card-title'>
-						<Link href={`/blogs/${blog.slug}`}>{blog.title}</Link>
+						<Link
+							href={`/blogs/${blog.slug}`}
+							className='font-semibold hover:text-purple-500'>
+							{blog.title}
+						</Link>
 					</h3>
 				</CardTitle>
 				<CardDescription className='w-full flex flex-row justify-between'>
@@ -64,7 +68,11 @@ export default async function BlogCard({ blog }) {
 								: blog.content,
 					}}></div>
 
-				<Link href={`/blogs/${blog.slug}`}>see more</Link>
+				<Link
+					href={`/blogs/${blog.slug}`}
+					className='font-semibold hover:text-purple-500'>
+					see more
+				</Link>
 			</CardContent>
 
 			<CardFooter className='flex justify-between content-end'>
@@ -73,16 +81,20 @@ export default async function BlogCard({ blog }) {
 				</small> */}
 
 				<BlogLike blog={blog} />
-				
+
 				<div className='w-1/2 flex flex-row justify-evenly '>
 					<Link href={`/blogs/${blog.slug}`}>
-						<Button variant='outline'>View More</Button>
+						<Button variant='outline' className=' hover:text-purple-800'>
+							View More
+						</Button>
 					</Link>
 
 					{sessionData?.user?.id == blog?.postedBy?.id ? (
 						<div className='flex flex-row justify-between'>
 							<Link href={"/blogs/edit/" + blog.slug}>
-								<Button>Edit</Button>
+								<Button variant='outline' className=' hover:text-purple-800'>
+									Edit
+								</Button>
 							</Link>
 						</div>
 					) : null}

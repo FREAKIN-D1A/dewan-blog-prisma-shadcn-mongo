@@ -1,7 +1,5 @@
 import BlogCard from "./BlogCard";
 
-
-
 export default function BlogList({ blogs }) {
 	return (
 		<div className='container mx-auto mb-5'>
